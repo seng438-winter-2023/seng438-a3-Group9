@@ -310,6 +310,30 @@ public class RangeTest  {
         assertEquals("The expected upper bound of the range is 3",3,exampleRange.getLowerBound(), .000000001d);
     }
 
+    @Test // new
+    public void getLowerBoundShouldBeMinusTwo() {
+        assertEquals("The lower bound value of -2 and 3 should be -2",
+                -2, exampleRange.getLowerBound(), .000000001d);
+    }
+
+    @Test // new
+    public void getLowerBoundShouldBeOne() {
+        Range newRange = new Range(1,5);
+        assertEquals("The lower bound value of 1 and 5 should be 1",
+                1, newRange.getLowerBound(), .000000001d);
+    }
+
+    @Test // new
+    public void LowerBiggerThanUpper() {
+        try {
+            Range newRange = new Range(3, 1);
+            assertTrue("The value is bigger than the lower bound",
+                    newRange.getUpperBound() > newRange.getLowerBound());
+        } catch(Exception e) {
+            throw e;
+        }
+    }
+
 
     // getUpperBound()-------------------------------
     @Test // old
@@ -335,6 +359,42 @@ public class RangeTest  {
         Range exampleRange;
         exampleRange = new Range(-2, 4);
         assertTrue("The intersection between (-2, 4) and (3, 10) should be true.", exampleRange.intersects(3, 10));
+    }
+
+    @Test // new
+    public void intersectsShouldBeTrueOnLower() {
+        assertTrue("The lines intersect with each other",
+                exampleRange.intersects(-3, 0));
+    }
+
+    @Test // new
+    public void intersectsShouldBeTrueOnMiddle() {
+        assertTrue("The lines intersect with each other",
+                exampleRange.intersects(1, 2));
+    }
+
+    @Test // new
+    public void intersectsShouldBeTrueOnUpper() {
+        assertTrue("The lines intersect with each other",
+                exampleRange.intersects(2, 6));
+    }
+
+    @Test // new
+    public void intersectsShouldBeTrueLowerOnUpper() {
+        assertTrue("The lines intersect with each other",
+                exampleRange.intersects(-4, 4));
+    }
+
+    @Test // new
+    public void intersectsShouldBeFalseOnLower() {
+        assertFalse("The lines do not intersect with each other",
+                exampleRange.intersects(-7, -4));
+    }
+
+    @Test // new
+    public void intersectsShouldBeFalseOnUpper() {
+        assertFalse("The lines do not intersect with each other",
+                exampleRange.intersects(4, 6));
     }
 
 
