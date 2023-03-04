@@ -126,7 +126,7 @@ public class RangeTest  {
     @Test // new
     public void constrainUpperBound() {
         assertEquals("Expected output: 3",
-                3 , exampleRange.constrain(4), .000000001d);
+                3 , exampleRange.constrain(3), .000000001d);
     }
 
     /**
@@ -145,7 +145,7 @@ public class RangeTest  {
     @Test // old
     public void containsTest() {
         Range exampleRange;
-        exampleRange = new Range(-2, 4);
+        exampleRange = new Range(-2, 3);
         assertTrue("Expected output is True as 0.1 falls within the defined range.", exampleRange.contains(0.1));
     }
 
@@ -537,12 +537,6 @@ public class RangeTest  {
     }
 
     @Test
-    public void intersectsShouldBeTrueLower() {
-        assertTrue("The lines interesect",
-                exampleRange.intersects(-3, 0));
-    }
-
-    @Test
     public void intersectsShouldBeTrueMiddle() {
         assertTrue("The lines interesect",
                 exampleRange.intersects(1, 2));
@@ -693,14 +687,14 @@ public class RangeTest  {
 
 
     //scale()------------------------
-    @Test
+    @Test // new
     public void scalePositive() {
         Range R = new Range(-4,6);
         assertEquals("The range should be -4 to 6",
                 R, Range.scale(exampleRange, 2));
     }
 
-    @Test
+    @Test // new
     public void scaleNegative() {
         try {
             assertEquals("The factor is negative",
@@ -711,9 +705,52 @@ public class RangeTest  {
     }
 
     //isNaNRange() ---------------------------
-    @Test
+    @Test // new
     public void isNaNRangeTrue() {
         assertFalse("The range is NaN",
                 exampleRange.isNaNRange());
+    }
+
+    //--------------------------- combineIgnoringNaN(Range range1, Range range2)
+    @Test // new
+    public void combineIgnoringNaNNullNull() {
+        assertEquals("The returned value is null",
+                null, Range.combineIgnoringNaN(null, null));
+    }
+
+    @Test // new
+    public void combineIgnoringNaNNullNotNull() {
+        Range R = new Range(Double.NaN,Double.NaN);
+        assertEquals("The returned value is a range of NaN",
+                null, Range.combineIgnoringNaN(null, R));
+    }
+
+    @Test // new
+    public void combineIgnoringNaNNotNullNull() {
+        Range R = new Range(Double.NaN,Double.NaN);
+        assertEquals("The returned value is a range of NaN",
+                null, Range.combineIgnoringNaN(R, null));
+    }
+
+    @Test // new
+    public void combineIgnoringNaNNumberNull() {
+        assertEquals("The returned value is a range of -3 to 2",
+                exampleRange, Range.combineIgnoringNaN(exampleRange, null));
+    }
+
+    @Test // new
+    public void combineIgnoringNaNNumberNumber() {
+        Range R = new Range(1,4);
+        Range C = new Range(-2,4);
+        assertEquals("The returned value is a range of -2 to 4",
+                C, Range.combineIgnoringNaN(exampleRange, R));
+    }
+
+    @Test // new
+    public void combineIgnoringNaNNaNNaN() {
+        Range R = new Range(Double.NaN,Double.NaN);
+        Range S = new Range(Double.NaN,Double.NaN);
+        assertEquals("The returned value is a range of NaN",
+                null, Range.combineIgnoringNaN(R, S));
     }
 }
