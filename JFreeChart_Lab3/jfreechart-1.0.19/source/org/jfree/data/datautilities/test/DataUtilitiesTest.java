@@ -26,7 +26,12 @@ public class DataUtilitiesTest extends DataUtilities {
     // -------------------------------------------------
 
     /**
-     *
+     * Tests the functionality of the calculateColumnTotal method.
+     * Verifies that the method returns the correct sum of the values in one column of the supplied data table.
+     * @param data the table of values (null not permitted)
+     * @param column the column index (zero-based)
+     * @param expectedTotal the expected sum of the values in the specified column
+     * @throws InvalidParameterException if invalid data object is passed in
      */
     @Test // old
     public void calculateColumnTotalTest() {
@@ -48,6 +53,11 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals("The sum of all elements in the column 0 should be 30", 30, result, .000000001d);
     }
 
+    /**
+     *Tests the functionality of the calculateRowTotal method.
+     *Verifies that the method returns the correct sum of the values in one row of the supplied data table.
+     *@throws InvalidParameterException if invalid data object is passed in
+     */
     @Test // new
     public void calculateColumnTotalForFourValuesTest() {
         Mockery mockingContext = new Mockery();
@@ -65,6 +75,10 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(5.0, result, .000000001d);
     }
 
+    /**
+     * Tests the calculateColumnTotal method with invalid input.
+     * Verifies that the method returns a total of zero when an invalid data object is passed in.
+     */
     @Test // new
     public void calculateColumnTotalWithInvalidInput() {
 
@@ -83,6 +97,11 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(0.0, result, .000000001d);
     }
 
+    /**
+     * Tests the calculateColumnTotal method with valid rows specified.
+     * Verifies that the method returns the correct sum of the values in one column of the supplied data table
+     * when valid rows are specified.
+     */
     @Test // new
     public void testCalculateColumnTotalWithValidRowsSpecified() {
 
@@ -104,6 +123,11 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(14.0, result, .000000001d);
     }
 
+    /**
+     * Tests the calculateColumnTotal method with invalid rows specified.
+     * Verifies that the method returns a total of zero when invalid row
+     * indices (out of bounds) are specified.
+     */
     @Test //new
     public void testCalculateColumnTotalWithInvalidRows() {
         Mockery mockingContext = new Mockery();
