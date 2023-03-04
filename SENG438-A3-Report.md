@@ -20,7 +20,10 @@ The following lab report will be showing information on assignment 3. The assign
 # 2 Manual data-flow coverage calculations the two mentioned methods
 
 ## calculateColumnTotal()
-By counting the number of predicate nodes we can see that there are a total of 4 predicate nodes 
+By counting the number of predicate nodes we can calcualte the cyclomatic complexity. We see that there are a total of 4 predicate nodes and using the equation of v(G) = 1 + d where "d" is the number of predicate nodes we get the overall cyclomatic complexity to be 5. 
+
+## getLowerBound() 
+By counting the number of predicate nodes we can calcualte the cyclomatic complexity. We see that there are a total of 1 predicate node and using the equation of v(G) = 1 + d where "d" is the number of predicate nodes we get the overall cyclomatic complexity to be 2. 
 
 
 
