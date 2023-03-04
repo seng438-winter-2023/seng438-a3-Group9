@@ -705,7 +705,7 @@ public class RangeTest  {
                 exampleRange.isNaNRange());
     }
 
-    //--------------------------- 
+    //---------------------------
     @Test //
     public void combineWithIgnoringNaNNullNullTest() {
         assertEquals("The returned value should be null",
