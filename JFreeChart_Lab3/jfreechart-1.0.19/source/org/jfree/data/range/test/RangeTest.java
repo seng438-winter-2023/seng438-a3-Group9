@@ -215,7 +215,8 @@ public class RangeTest  {
     }
 
     /**
-     *
+     * This method will be used to check if there are ranges that will be expanded 
+     * with two inputs that are both valid 
      */
     @Test // old
     public void testExpandWithValidInputs2() {
@@ -228,7 +229,7 @@ public class RangeTest  {
     //expandToInclude()----------------------------
 
     /**
-     *
+     * This method will be used to check if the ranges can be 
      */
     @Test // old
     public void testExpandToInclude() {
