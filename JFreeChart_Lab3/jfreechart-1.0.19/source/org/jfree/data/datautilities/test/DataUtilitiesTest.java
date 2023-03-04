@@ -33,7 +33,7 @@ public class DataUtilitiesTest extends DataUtilities {
      * @param expectedTotal the expected sum of the values in the specified column
      * @throws InvalidParameterException if invalid data object is passed in
      */
-    @Test // old
+    @Test //
     public void calculateColumnTotalTest() {
 
         Mockery mockingContext = new Mockery();
@@ -58,8 +58,8 @@ public class DataUtilitiesTest extends DataUtilities {
      *Verifies that the method returns the correct sum of the values in one row of the supplied data table.
      *@throws InvalidParameterException if invalid data object is passed in
      */
-    @Test // new
-    public void calculateColumnTotalForFourValuesTest() {
+    @Test //
+    public void calculateColumnTotalForFourValuesTestTest() {
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
         mockingContext.checking(new Expectations() {
@@ -79,8 +79,8 @@ public class DataUtilitiesTest extends DataUtilities {
      * Tests the calculateColumnTotal method with invalid input.
      * Verifies that the method returns a total of zero when an invalid data object is passed in.
      */
-    @Test // new
-    public void calculateColumnTotalWithInvalidInput() {
+    @Test //
+    public void calculateColumnTotalWithInvalidInputTest() {
 
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
@@ -102,8 +102,8 @@ public class DataUtilitiesTest extends DataUtilities {
      * Verifies that the method returns the correct sum of the values in one column of the supplied data table
      * when valid rows are specified.
      */
-    @Test // new
-    public void testCalculateColumnTotalWithValidRowsSpecified() {
+    @Test //
+    public void testCalculateColumnTotalWithValidRowsSpecifiedTest() {
 
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
@@ -128,8 +128,8 @@ public class DataUtilitiesTest extends DataUtilities {
      * Verifies that the method returns a total of zero when invalid row
      * indices (out of bounds) are specified.
      */
-    @Test //new
-    public void testCalculateColumnTotalWithInvalidRows() {
+    @Test //
+    public void testCalculateColumnTotalWithInvalidRowsTest() {
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
         mockingContext.checking(new Expectations() {
@@ -148,8 +148,8 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(0.0, result, .000000001d);
     }
 
-    @Test // new
-    public void testCalculateColumnTotalWithValidRowsNullValues() {
+    @Test //
+    public void testCalculateColumnTotalWithValidRowsNullValuesTest() {
 
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
@@ -169,8 +169,8 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(0.0, result, .000000001d);
     }
 
-    @Test // new
-    public void testCalculateColumnTotalWithNullValues() {
+    @Test //
+    public void testCalculateColumnTotalWithNullValuesTest() {
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
         mockingContext.checking(new Expectations() {
@@ -190,8 +190,8 @@ public class DataUtilitiesTest extends DataUtilities {
     }
 
 
-    @Test // new
-    public void calculateColumnTotalForFourValues() {
+    @Test //
+    public void calculateColumnTotalForFourValuesTest() {
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
         mockingContext.checking(new Expectations() {
@@ -212,8 +212,8 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(5.0, result, .000000001d);
     }
 
-    @Test(expected = InvalidParameterException.class) // new
-    public void calculateColumnTotalWithInvalidParameter() throws InvalidParameterException {
+    @Test(expected = InvalidParameterException.class) //
+    public void calculateColumnTotalWithInvalidParameterTest() throws InvalidParameterException {
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
         mockingContext.checking(new Expectations() {
@@ -228,8 +228,8 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(0, result, .000000001d);
     }
 
-    @Test(expected = InvalidParameterException.class) // new
-    public void calculateRowTotalWithInvalidParameter() throws InvalidParameterException {
+    @Test(expected = InvalidParameterException.class) //
+    public void calculateRowTotalWithInvalidParameterTest() throws InvalidParameterException {
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
         mockingContext.checking(new Expectations() {
@@ -245,7 +245,7 @@ public class DataUtilitiesTest extends DataUtilities {
     }
 
     //-----------------------------------
-    @Test // old
+    @Test //
     public void calculateRowTotalTest() {
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
@@ -265,8 +265,8 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals("The sum of all elements in the row 0 should be 40", expected, result, .000000001d);
     }
 
-    @Test // new
-    public void calculateRowTotalWithInvalidInput() {
+    @Test //
+    public void calculateRowTotalWithInvalidInputTest() {
 
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
@@ -283,8 +283,8 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(0.0, result, .000000001d);
     }
 
-    @Test // new
-    public void calculateRowTotalForFourValues() {
+    @Test //
+    public void calculateRowTotalForFourValuesTest() {
 
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
@@ -301,8 +301,8 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(5.0, result, .000000001d);
     }
 
-    @Test // new
-    public void calculateRowTotalWithNullValues() {
+    @Test //
+    public void calculateRowTotalWithNullValuesTest() {
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
         mockingContext.checking(new Expectations() {
@@ -323,8 +323,8 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(10.0, result, .000000001d);
     }
 
-    @Test // new
-    public void calculateRowTotalWithValidColumns() {
+    @Test //
+    public void calculateRowTotalWithValidColumnsTest() {
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
         mockingContext.checking(new Expectations() {
@@ -350,8 +350,8 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(8.5, result, .000000001d);
     }
 
-    @Test // new
-    public void calculateRowTotalWithValidColumnsNullValues() {
+    @Test //
+    public void calculateRowTotalWithValidColumnsNullValuesTest() {
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
         mockingContext.checking(new Expectations() {
@@ -377,8 +377,8 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(13.5, result, .000000001d);
     }
 
-    @Test // new
-    public void calculateRowTotalWithInValidColumns() {
+    @Test //
+    public void calculateRowTotalWithInValidColumnsTest() {
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
         mockingContext.checking(new Expectations() {
@@ -408,7 +408,7 @@ public class DataUtilitiesTest extends DataUtilities {
 
     // ---------------------------------------------------
     @Test
-    public void createNumberArrayTest() {
+    public void createNumberArrayTestTest() {
         java.lang.Number[] expected = new java.lang.Number[] {10.0, 20.0};
         double[] data = new double[] {10.0, 20.0};
         assertEquals("The converted double array data to array of Number objects.", expected, DataUtilities.createNumberArray(data));
@@ -416,7 +416,7 @@ public class DataUtilitiesTest extends DataUtilities {
 
     @Test(expected = InvalidParameterException.class)
 
-    public void testCreateNumberArrayWithInvalidData() throws InvalidParameterException {
+    public void testCreateNumberArrayWithInvalidDataTest() throws InvalidParameterException {
 
         double[] input = null;
 
@@ -424,8 +424,8 @@ public class DataUtilitiesTest extends DataUtilities {
 
     }
 
-    @Test // new
-    public void testCreateNumberArray() {
+    @Test //
+    public void testCreateNumberArrayTest() {
         double[] input = { 1, 2, 3, 4, 5 };
         Number[] expectedOutput = { 1.0, 2.0, 3.0, 4.0, 5.0 };
         Number[] actualOutput = DataUtilities.createNumberArray(input);
@@ -434,21 +434,21 @@ public class DataUtilitiesTest extends DataUtilities {
 
 
     //--------------------------------------------------------
-    @Test // old
-    public void createNumberArray2DTest() {
+    @Test //
+    public void createNumberArray2DTestTest() {
         java.lang.Number[][] expected = new java.lang.Number[][] {{10.0, 20.0}, {30.0, 40.0}};;
         double[][] data = new double[][] {{10.0, 20.0}, {30.0, 40.0}};
         java.lang.Number[][] result = DataUtilities.createNumberArray2D(data);
         assertEquals("The converted 2D double array data to 2D array of Number objects.", expected, result);
     }
 
-    @Test(expected = InvalidParameterException.class) // new
-    public void testCreateNumberArray2DWithInvalidData() throws InvalidParameterException {
+    @Test(expected = InvalidParameterException.class) //
+    public void testCreateNumberArray2DWithInvalidDataTest() throws InvalidParameterException {
         double[][] input = null;
         DataUtilities.createNumberArray2D(input);
     }
 
-    @Test // new
+    @Test //
     public void testCreateNumberArray2D() {
         double[][] input = { { 1, 2 }, { 3, 4 }, { 5, 9 } };
         Number[][] expectedOutput = { { 1.0, 2.0 }, { 3.0, 4.0 }, { 5.0, 9.0 } };
@@ -458,8 +458,8 @@ public class DataUtilitiesTest extends DataUtilities {
 
 
     //--------------------------------------------------------
-    @Test // old
-    public void testGetCumulativePercentages() {
+    @Test //
+    public void testGetCumulativePercentagesTest() {
         Mockery context = new Mockery();
         final KeyedValues data = context.mock(KeyedValues.class, "data");
         final KeyedValues expectedResult = context.mock(KeyedValues.class, "expectedResult");
@@ -488,8 +488,8 @@ public class DataUtilitiesTest extends DataUtilities {
         context.assertIsSatisfied();
     }
 
-    @Test // new
-    public void testGetCumulativePercentage() {
+    @Test //
+    public void testGetCumulativePercentageTest() {
         Mockery mockingContext = new Mockery();
         final KeyedValues values = mockingContext.mock(KeyedValues.class);
         mockingContext.checking(new Expectations() {
@@ -534,8 +534,8 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(expectedOutput.getValue(2), actualOutput.getValue(2));
     }
 
-    @Test // new
-    public void testGetCumulativePercentageWithNullValues() {
+    @Test //
+    public void testGetCumulativePercentageWithNullValuesTest() {
         Mockery mockingContext = new Mockery();
         final KeyedValues values = mockingContext.mock(KeyedValues.class);
         mockingContext.checking(new Expectations() {
@@ -578,8 +578,8 @@ public class DataUtilitiesTest extends DataUtilities {
     // Non categorized tests---------
 
 
-    @Test // new
-    public void testEqualWithAnEqualArrays() {
+    @Test //
+    public void testEqualWithAnEqualArraysTest() {
         double[][] first = {{2,2}, {5,4}, {-9, 10}};
         double[][] second = {{2,2}, {5,4}, {-9, 10}};
         boolean expected = true;
@@ -587,8 +587,8 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(expected, actual);
     }
 
-    @Test // new
-    public void testEqualWithAnNullArrays() {
+    @Test //
+    public void testEqualWithAnNullArraysTest() {
         double[][] firstArray = null;
         double[][] secondArray = null;
         boolean expected = true;
@@ -596,8 +596,8 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(expected, actual);
     }
 
-    @Test // new
-    public void testEqualWithOneANullAndNonNull() {
+    @Test //
+    public void testEqualWithOneANullAndNonNullTest() {
         double[][] first = {{1,4}, {4,4}, {-2, 13}};
         double[][] second = null;
         boolean expected = false;
@@ -605,8 +605,8 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(expected, actual);
     }
 
-    @Test // new
-    public void testEqualWithADifferentLengthArrays() {
+    @Test //
+    public void testEqualWithADifferentLengthArraysTest() {
         double[][] first = {{1,2}, {3,4}, {-9, 10}};
         double[][] second = {{2,4}};
         boolean expected = false;
@@ -614,8 +614,8 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(expected, actual);
     }
 
-    @Test // new
-    public void testEqualWithSameLengthForDifferentArrays() {
+    @Test //
+    public void testEqualWithSameLengthForDifferentArraysTest() {
         double[][] first = {{4,2}, {3,4}, {-8, 10}};
         double[][] second = {{4,2}, {3,5}, {-8, 10}};
         boolean expected = false;
@@ -623,8 +623,8 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(expected, actual);
     }
 
-    @Test // new
-    public void testCloneWithAValidArray() {
+    @Test //
+    public void testCloneWithAValidArrayTest() {
         double[][] expected = {{1,2}, {3,4}, {-8, 11}};
         double[][] actual = DataUtilities.clone(expected);
         assertArrayEquals(expected, actual);
