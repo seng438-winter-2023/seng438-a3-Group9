@@ -600,6 +600,10 @@ public class DataUtilitiesTest extends DataUtilities {
     // Non categorized tests---------
 
 
+    /**
+     * Tests the equal method with two equal arrays passed in.
+     * Verifies that the method returns true when two equal arrays are compared.
+     */
     @Test //
     public void testEqualWithAnEqualArraysTest() {
         double[][] first = {{2,2}, {5,4}, {-9, 10}};
@@ -609,6 +613,10 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(expected, actual);
     }
 
+    /**
+     * Tests the equal method with two null arrays passed in.
+     * Verifies that the method returns true when two null arrays are passed in, indicating that they are equal.
+     */
     @Test //
     public void testEqualWithAnNullArraysTest() {
         double[][] firstArray = null;
@@ -618,6 +626,10 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(expected, actual);
     }
 
+    /**
+     * Tests the equal method with one null and one non-null array passed in.
+     * Verifies that the method returns false when one array is null and the other is not.
+     */
     @Test //
     public void testEqualWithOneANullAndNonNullTest() {
         double[][] first = {{1,4}, {4,4}, {-2, 13}};
@@ -627,6 +639,10 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(expected, actual);
     }
 
+    /**
+     * Tests the equal method with arrays of different lengths.
+     * Verifies that the method returns false when two arrays of different dimensions are passed in.
+     */
     @Test //
     public void testEqualWithADifferentLengthArraysTest() {
         double[][] first = {{1,2}, {3,4}, {-9, 10}};
@@ -636,6 +652,10 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(expected, actual);
     }
 
+    /**
+     * Tests the equal method with different arrays of the same length.
+     * Verifies that the method returns false when comparing two arrays with different values.
+     */
     @Test //
     public void testEqualWithSameLengthForDifferentArraysTest() {
         double[][] first = {{4,2}, {3,4}, {-8, 10}};
@@ -645,6 +665,10 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(expected, actual);
     }
 
+    /**
+     * Tests the clone method with a valid array passed in.
+     * Verifies that the method returns a clone of the specified array.
+     */
     @Test //
     public void testCloneWithAValidArrayTest() {
         double[][] expected = {{1,2}, {3,4}, {-8, 11}};
