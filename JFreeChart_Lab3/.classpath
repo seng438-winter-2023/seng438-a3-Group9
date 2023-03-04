@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/Users/sina/Library/CloudStorage/OneDrive-UniversityofCalgary/University/Academic Terms/2023_Winter/SENG 438/Assignments/Assignment 2/seng438-a2-sinapordanesh/lib/jfreechart.jar"/>
+	<classpathentry kind="lib" path="/Users/sina/Library/CloudStorage/OneDrive-UniversityofCalgary/University/Academic Terms/2023_Winter/SENG 438/Assignments/Assignment 2/seng438-a2-sinapordanesh/lib/lib/jMock/jmock-2.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/sina/Library/CloudStorage/OneDrive-UniversityofCalgary/University/Academic Terms/2023_Winter/SENG 438/Assignments/Assignment 2/seng438-a2-sinapordanesh/lib/lib/jMock/jmock-junit3-2.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/sina/Library/CloudStorage/OneDrive-UniversityofCalgary/University/Academic Terms/2023_Winter/SENG 438/Assignments/Assignment 2/seng438-a2-sinapordanesh/lib/lib/jMock/jmock-junit4-2.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/sina/Library/CloudStorage/OneDrive-UniversityofCalgary/University/Academic Terms/2023_Winter/SENG 438/Assignments/Assignment 2/seng438-a2-sinapordanesh/lib/lib/jMock/jmock-legacy-2.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/sina/Library/CloudStorage/OneDrive-UniversityofCalgary/University/Academic Terms/2023_Winter/SENG 438/Assignments/Assignment 2/seng438-a2-sinapordanesh/lib/lib/jMock/jmock-script-2.5.1.jar"/>
+	<classpathentry kind="lib" path="/Users/sina/Library/CloudStorage/OneDrive-UniversityofCalgary/University/Academic Terms/2023_Winter/SENG 438/Assignments/Assignment 2/seng438-a2-sinapordanesh/lib/lib/bsh-core-2.0b4.jar"/>
+	<classpathentry kind="lib" path="/Users/sina/Library/CloudStorage/OneDrive-UniversityofCalgary/University/Academic Terms/2023_Winter/SENG 438/Assignments/Assignment 2/seng438-a2-sinapordanesh/lib/lib/cglib-2.1_3-src.jar"/>
+	<classpathentry kind="lib" path="/Users/sina/Library/CloudStorage/OneDrive-UniversityofCalgary/University/Academic Terms/2023_Winter/SENG 438/Assignments/Assignment 2/seng438-a2-sinapordanesh/lib/lib/cglib-nodep-2.1_3.jar"/>
+	<classpathentry kind="lib" path="/Users/sina/Library/CloudStorage/OneDrive-UniversityofCalgary/University/Academic Terms/2023_Winter/SENG 438/Assignments/Assignment 2/seng438-a2-sinapordanesh/lib/lib/gnujaxp.jar"/>
+	<classpathentry kind="lib" path="/Users/sina/Library/CloudStorage/OneDrive-UniversityofCalgary/University/Academic Terms/2023_Winter/SENG 438/Assignments/Assignment 2/seng438-a2-sinapordanesh/lib/lib/hamcrest-core-1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/sina/Library/CloudStorage/OneDrive-UniversityofCalgary/University/Academic Terms/2023_Winter/SENG 438/Assignments/Assignment 2/seng438-a2-sinapordanesh/lib/lib/hamcrest-library-1.1.jar"/>
+	<classpathentry kind="lib" path="/Users/sina/Library/CloudStorage/OneDrive-UniversityofCalgary/University/Academic Terms/2023_Winter/SENG 438/Assignments/Assignment 2/seng438-a2-sinapordanesh/lib/lib/jcommon-1.0.0-rc1-cvs.jar"/>
+	<classpathentry kind="lib" path="/Users/sina/Library/CloudStorage/OneDrive-UniversityofCalgary/University/Academic Terms/2023_Winter/SENG 438/Assignments/Assignment 2/seng438-a2-sinapordanesh/lib/lib/jcommon-1.0.5.jar"/>
+	<classpathentry kind="lib" path="/Users/sina/Library/CloudStorage/OneDrive-UniversityofCalgary/University/Academic Terms/2023_Winter/SENG 438/Assignments/Assignment 2/seng438-a2-sinapordanesh/lib/lib/junit-old.jar"/>
+	<classpathentry kind="lib" path="/Users/sina/Library/CloudStorage/OneDrive-UniversityofCalgary/University/Academic Terms/2023_Winter/SENG 438/Assignments/Assignment 2/seng438-a2-sinapordanesh/lib/lib/junit.jar"/>
+	<classpathentry kind="lib" path="/Users/sina/Library/CloudStorage/OneDrive-UniversityofCalgary/University/Academic Terms/2023_Winter/SENG 438/Assignments/Assignment 2/seng438-a2-sinapordanesh/lib/lib/objenesis-1.0.jar"/>
+	<classpathentry kind="lib" path="/Users/sina/Library/CloudStorage/OneDrive-UniversityofCalgary/University/Academic Terms/2023_Winter/SENG 438/Assignments/Assignment 2/seng438-a2-sinapordanesh/lib/lib/servlet.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
