@@ -34,7 +34,25 @@ The process in creating tests for coverage based testing required the group to f
 
 
 # 4 A high level description of five selected test cases you have designed using coverage information, and how they have increased code coverage
+1. Method : public boolean contains(double value) 
+   Class : Range
+    This method is utilized to check if the given value in the argument contains in the range. In the assignment 2, we only designed one test case for this method that we also used in the beginning of the third assignment as well. When checking the method       contains in the Rangle.java, we realized there are 6 branches with 2 if statements and else statements and one return staments with two conditions. For each test       branch, we designed test case that increased the coverage percentage.
+    
+2. Method : public static Range scale(Range base, double factor)
+   Class : Range
+    This method is utilized to change the range with the given scale, For this method, we identified that there are two branches to this method, one if and else statement. In the assignment we only designed one test case for this         method, but for the assignment three, we designed two test case that checks both true, false of the if statement.
+    
+3. Method : public static Range expandToInclude(Range range, double value)
+   Class : Range
+    This method is utilized to expand the range to include the given value, For this method, we identified that there are 6 branches with 3 if statements. One to check if the range is null, one to check if the given value is lower than the     lower boundary and one to check if the given value is higher than the higher boundary. In assignment two, we designed only one test case and for the assignment         three, we designed 6 test cases to check each if else statements.
+    
+4. Method : public static double calculateColumnTotal(Values2D data, int column)
+   Class : DataUtilities
+     This method is utilized to calculate the total of the given column. For the assignment two, we designed only one test case, but for this assignment, we created more test cases to check all the 8 branches in the method. There are two for loops and two if else statements that adds upto 8 branches.
 
+5. Method : public static double calculateRowTotal(Values2D data, int row)
+   Class : DataUtilities
+	This method is utilized to calculate the total of the given row. For the assignment two, we designed only one test case, but for this assignment, we created more test cases to check all the 8 branches in the method. There are two for loops and two if else statements that adds upto 8 branches.
 
 # 5 A detailed report of the coverage achieved of each class and method 
 
