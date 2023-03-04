@@ -22,10 +22,10 @@ The following lab report will be showing information on assignment 3. The assign
 <img width="427" alt="Screen Shot 2023-03-03 at 7 17 07 PM" src="https://user-images.githubusercontent.com/84950398/222870609-172ff967-589a-4cad-8635-e8903ad25f16.png">
 
 ## calculateColumnTotal()
-By counting the number of predicate nodes we can calcualte the cyclomatic complexity. We see that there are a total of 4 predicate nodes and using the equation of v(G) = 1 + d where "d" is the number of predicate nodes we get the overall cyclomatic complexity to be 5. 
+By counting the number of predicate nodes we can calcualte the cyclomatic complexity. We see that there are a total of 4 predicate nodes and using the equation of v(G) = 1 + d where "d" is the number of predicate nodes we get the overall cyclomatic complexity to be 5. For the DU paths there will be several possible paths that can be used. One example would be to use the following path: [1,2,3,5,2,4,6,8,4,7]
 
 ## getLowerBound() 
-By counting the number of predicate nodes we can calcualte the cyclomatic complexity. We see that there are a total of 1 predicate node and using the equation of v(G) = 1 + d where "d" is the number of predicate nodes we get the overall cyclomatic complexity to be 2. 
+By counting the number of predicate nodes we can calcualte the cyclomatic complexity. We see that there are a total of 1 predicate node and using the equation of v(G) = 1 + d where "d" is the number of predicate nodes we get the overall cyclomatic complexity to be 2. One example of a path that could be used to visit each node would be: [1,2] and then [1,3] in order to cover all the nodes. 
 
 
 
