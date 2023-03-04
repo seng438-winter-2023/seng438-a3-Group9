@@ -81,6 +81,26 @@ public class RangeTest  {
         assertEquals("We are combining two non-null ranges. Result should be 0-10", expectedResult, result);
     }
 
+    @Test
+    public void combineRange1Null() {
+        assertEquals("The range is -3 to 2",
+                exampleRange, Range.combine(null, exampleRange));
+    }
+
+    @Test
+    public void combineRange2Null() {
+        assertEquals("The range is -3 to 2",
+                exampleRange, Range.combine(exampleRange, null));
+    }
+
+    @Test
+    public void combineRight() {
+        Range R = new Range(1, 3);
+        Range C = new Range(-2, 3);
+        assertEquals("The range is -3 to 3",
+                C, Range.combine(exampleRange, R));
+    }
+
     // constrain()---------------------------------
 
     @Test // old
@@ -237,6 +257,20 @@ public class RangeTest  {
                 exampleRange.equals(newRange));
     }
 
+    @Test
+    public void equalsIsNotRange() {
+        assertFalse("The Object is not a Range",
+                exampleRange.equals("Fluminense"));
+    }
+
+
+    @Test
+    public void equalsTrue() {
+        Range R = new Range(-2,3);
+        assertTrue("Both Ranges of exampleRange and R are equal",
+                exampleRange.equals(R));
+    }
+
 
     //expand()------------------------------------
     /**
@@ -313,6 +347,13 @@ public class RangeTest  {
                 newRange, Range.expandToInclude(null, 2));
     }
 
+    @Test
+    public void expandRange() {
+        Range R = new Range(18,23);
+        assertEquals("The range should be 18 to 23",
+                R, Range.expand(exampleRange, -4, 4));
+    }
+
 
     // getCentralValue()---------------------------
 
@@ -326,6 +367,12 @@ public class RangeTest  {
         exampleRange = new Range(-2, 2);
         double actual = exampleRange.getCentralValue();
         assertEquals("The expected central value is 0",0,actual, .000000001d);
+    }
+
+    @Test
+    public void getCentralValueShouldBeZeroPointFive() {
+        assertEquals("The central value of -2 and 3 should be 0.5",
+                0.5, exampleRange.getCentralValue(), .000000001d);
     }
 
 
@@ -350,6 +397,11 @@ public class RangeTest  {
                 0, newRange.getLength(), .000000001d);
     }
 
+    @Test
+    public void getLengthShouldBeFive() {
+        assertEquals("The central value of -2 and 3 should be 5",
+                5, exampleRange.getLength(), .000000001d);
+    }
 
     // getLowerBound()-------------------------------
     @Test // old
@@ -390,13 +442,26 @@ public class RangeTest  {
         assertEquals("The expected lower bound of the range is -2",-2,exampleRange.getUpperBound(), .000000001d);
     }
 
+    @Test
+    public void getUpperBoundShouldBeThree() {
+        assertEquals("The upper bound value of -2 and 3 should be 3",
+                3, exampleRange.getUpperBound(), .000000001d);
+    }
+
 
     // hashCode()-------------------------------------
+
     @Test // old
     public void testRangeHashCode()
     {
         int returnHashCode = hashCode();
         assertEquals("HashCode for the range -2, 4 should be 1", 1, returnHashCode);
+    }
+
+    @Test
+    public void hashCodeTest() {
+        assertEquals("The hash code is 524288",
+                524288 , exampleRange.hashCode());
     }
 
 
@@ -444,6 +509,62 @@ public class RangeTest  {
                 exampleRange.intersects(4, 6));
     }
 
+    @Test
+    public void intersectsShouldBeTrueLower() {
+        assertTrue("The lines interesect",
+                exampleRange.intersects(-3, 0));
+    }
+
+    @Test
+    public void intersectsShouldBeTrueLower() {
+        assertTrue("The lines interesect",
+                exampleRange.intersects(-3, 0));
+    }
+
+    @Test
+    public void intersectsShouldBeTrueMiddle() {
+        assertTrue("The lines interesect",
+                exampleRange.intersects(1, 2));
+    }
+
+    @Test
+    public void intersectsShouldBeTrueUpper() { // This test case is not working
+        assertTrue("The lines interesect",
+                exampleRange.intersects(2, 6));
+    }
+
+    @Test
+    public void intersectsShouldBeTrueLowerUpper() {
+        assertTrue("The lines interesect",
+                exampleRange.intersects(-4, 4));
+    }
+
+    @Test
+    public void intersectsShouldBeFalseLower() { // This test case is not working
+        assertFalse("The lines do not interesect",
+                exampleRange.intersects(-7, -4));
+    }
+
+    @Test
+    public void intersectsShouldBeFalseUpper() {
+        assertFalse("The lines do not interesect",
+                exampleRange.intersects(4, 6));
+    }
+
+    @Test
+    public void intersectsBoolean() {
+        Range R = new Range(0,1);
+        assertTrue("The lines interesect",
+                exampleRange.intersects(R));
+    }
+
+    @Test
+    public void intersectsBoolean2() {
+        Range R = new Range(0,1);
+        assertTrue("The lines interesect",
+                exampleRange.intersects(R));
+    }
+
 
     // shift()---------------------------------------
     @Test // old - Zero Crossing is not alowed
@@ -488,6 +609,27 @@ public class RangeTest  {
         assertEquals("Upper bound of range after shifted from 5.0 by 2.1 to the right should 10.1", returnRange.getUpperBound(), base.getUpperBound(), .000000001d);
     }
 
+    @Test
+    public void shiftTrue() {
+        Range R = new Range(0, 5);
+        assertEquals("The range should be 0 to 5",
+                R, Range.shift(exampleRange, 2, true));
+    }
+
+    @Test
+    public void shiftFalse() {
+        Range R = new Range(0, 5);
+        assertEquals("The range should be 0 to 5",
+                R, Range.shift(exampleRange, 2, false));
+    }
+
+    @Test
+    public void shiftTwoArgs() {
+        Range R = new Range(0, 5);
+        assertEquals("The range should be -1 to 5",
+                R, Range.shift(exampleRange, 2));
+    }
+
 
     // toString()------------------------------------
     @Test // old
@@ -519,156 +661,11 @@ public class RangeTest  {
                 "Range[-4.3,-1.2]" , R.toString());
     }
 
-    // Test private
+
+    // Test non documented functions ******************
 
 
-
-
-
-
-
-
-
-
-
-
-/**
-    //--------------------------- getUpperBound()
-    @Test
-    public void getUpperBoundShouldBeThree() {
-        assertEquals("The upper bound value of -2 and 3 should be 3",
-                3, exampleRange.getUpperBound(), .000000001d);
-    }
-
-    //--------------------------- getLength()
-    @Test
-    public void getLengthShouldBeFive() {
-        assertEquals("The central value of -2 and 3 should be 5",
-                5, exampleRange.getLength(), .000000001d);
-    }
-
-    //--------------------------- getCentralValue()
-    @Test
-    public void getCentralValueShouldBeZeroPointFive() {
-        assertEquals("The central value of -2 and 3 should be 0.5",
-                0.5, exampleRange.getCentralValue(), .000000001d);
-    }
-
-    //--------------------------- contains(double value)
-
-    //--------------------------- intersects(double b0, double b1)
-    @Test
-    public void intersectsShouldBeTrueLower() {
-        assertTrue("The lines interesect",
-                exampleRange.intersects(-3, 0));
-    }
-
-    @Test
-    public void intersectsShouldBeTrueMiddle() {
-        assertTrue("The lines interesect",
-                exampleRange.intersects(1, 2));
-    }
-
-    @Test
-    public void intersectsShouldBeTrueUpper() { // This test case is not working
-        assertTrue("The lines interesect",
-                exampleRange.intersects(2, 6));
-    }
-
-    @Test
-    public void intersectsShouldBeTrueLowerUpper() {
-        assertTrue("The lines interesect",
-                exampleRange.intersects(-4, 4));
-    }
-
-    @Test
-    public void intersectsShouldBeFalseLower() { // This test case is not working
-        assertFalse("The lines do not interesect",
-                exampleRange.intersects(-7, -4));
-    }
-
-    @Test
-    public void intersectsShouldBeFalseUpper() {
-        assertFalse("The lines do not interesect",
-                exampleRange.intersects(4, 6));
-    }
-
-    //--------------------------- intersects(Range range)
-    @Test
-    public void intersectsBoolean() {
-        Range R = new Range(0,1);
-        assertTrue("The lines interesect",
-                exampleRange.intersects(R));
-    }
-
-    @Test
-    public void intersectsBoolean2() {
-        Range R = new Range(0,1);
-        assertTrue("The lines interesect",
-                exampleRange.intersects(R));
-    }
-
-    //--------------------------- constrain()
-
-
-    //--------------------------- combine(Range range1, Range range2)
-    @Test
-    public void combineRange1Null() {
-        assertEquals("The range is -3 to 2",
-                exampleRange, Range.combine(null, exampleRange));
-    }
-
-    @Test
-    public void combineRange2Null() {
-        assertEquals("The range is -3 to 2",
-                exampleRange, Range.combine(exampleRange, null));
-    }
-
-    @Test
-    public void combineRight() {
-        Range R = new Range(1, 3);
-        Range C = new Range(-2, 3);
-        assertEquals("The range is -3 to 3",
-                C, Range.combine(exampleRange, R));
-    }
-
-
-
-    //--------------------------- expandToInclude(Range range, double value)
-
-
-    //--------------------------- expand(Range range, double lowerMargin, double upperMargin)
-    @Test
-    public void expandRange() {
-        Range R = new Range(18,23);
-        assertEquals("The range should be 18 to 23",
-                R, Range.expand(exampleRange, -4, 4));
-    }
-
-    //--------------------------- shift(Range base, double delta)
-    @Test
-    public void shiftTwoArgs() {
-        Range R = new Range(0, 5);
-        assertEquals("The range should be -1 to 5",
-                R, Range.shift(exampleRange, 2));
-    }
-
-    //--------------------------- shift(Range base, double delta, boolean allowZeroCrossing)
-    @Test
-    public void shiftTrue() {
-        Range R = new Range(0, 5);
-        assertEquals("The range should be 0 to 5",
-                R, Range.shift(exampleRange, 2, true));
-    }
-
-    @Test
-    public void shiftFalse() {
-        Range R = new Range(0, 5);
-        assertEquals("The range should be 0 to 5",
-                R, Range.shift(exampleRange, 2, false));
-    }
-
-    //--------------------------- scale(Range base, double factor)
+    //scale()------------------------
     @Test
     public void scalePositive() {
         Range R = new Range(-4,6);
@@ -686,37 +683,10 @@ public class RangeTest  {
         }
     }
 
-    //--------------------------- equals(Object obj)
-
-
-    @Test
-    public void equalsIsNotRange() {
-        assertFalse("The Object is not a Range",
-                exampleRange.equals("Fluminense"));
-    }
-
-
-    @Test
-    public void equalsTrue() {
-        Range R = new Range(-2,3);
-        assertTrue("Both Ranges of exampleRange and R are equal",
-                exampleRange.equals(R));
-    }
-
-    //--------------------------- isNaNRange()
+    //isNaNRange() ---------------------------
     @Test
     public void isNaNRangeTrue() {
         assertFalse("The range is NaN",
                 exampleRange.isNaNRange());
     }
-
-    //--------------------------- hashCode()
-    @Test
-    public void hashCodeTest() {
-        assertEquals("The hash code is 524288",
-                524288 , exampleRange.hashCode());
-    }
-
-    //--------------------------- toString()
-    */
 }
