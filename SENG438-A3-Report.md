@@ -6,7 +6,7 @@
 | Group \#:      | 9    |
 | -------------- | --- |
 | Student Names | |
-| Sina Pordanesh  | |
+| Saman Pordanesh  | |
 | Thevin Mahawatte | |
 | Bryant Stevnes |                |
 | Noureldin Amer |                    |
@@ -56,8 +56,34 @@ The process in creating tests for coverage based testing required the group to f
 
 # 5 A detailed report of the coverage achieved of each class and method 
 
-(a screen shot from the code cover results in green and red color would suffice)
-
+<img width="526" alt="DU1" src="https://user-images.githubusercontent.com/74850874/222872028-8dcf884d-16ec-477c-b504-15e8868020c3.png">
+<img width="487" alt="DU2" src="https://user-images.githubusercontent.com/74850874/222872029-1e427808-4c00-4f4f-9011-3df747869f0f.png">
+<img width="530" alt="DU3" src="https://user-images.githubusercontent.com/74850874/222872030-3a458d6a-0945-433c-9af1-3457f2d0f741.png">
+<img width="536" alt="DU4" src="https://user-images.githubusercontent.com/74850874/222872031-481632b7-9106-44cd-b584-babce8fd90db.png">
+<img width="525" alt="DUT1" src="https://user-images.githubusercontent.com/74850874/222872032-97704d54-9c93-4016-9264-0f1ab41b9255.png">
+<img width="418" alt="DUT2" src="https://user-images.githubusercontent.com/74850874/222872033-7cfe383c-cba1-48a3-8a86-2c91995f7a3f.png">
+<img width="596" alt="DUT3" src="https://user-images.githubusercontent.com/74850874/222872034-f4498fa3-d5b1-450d-b596-5400aecb0dda.png">
+<img width="586" alt="DUT4" src="https://user-images.githubusercontent.com/74850874/222872036-ea3a396a-5fc7-4a0a-9efb-4d365ddcb499.png">
+<img width="636" alt="DUT5" src="https://user-images.githubusercontent.com/74850874/222872038-5aa14756-699e-4a36-860e-4a38958efa82.png">
+<img width="599" alt="DUT6" src="https://user-images.githubusercontent.com/74850874/222872039-9dfb6ec1-4e79-4915-95af-84add7c7dad6.png">
+<img width="398" alt="DUT7" src="https://user-images.githubusercontent.com/74850874/222872040-2c0c4b1f-de30-4884-864c-6ea6bc34bfef.png">
+<img width="564" alt="R1" src="https://user-images.githubusercontent.com/74850874/222872041-32efefaf-2742-43fa-898c-2f9a8b0ea1ae.png">
+<img width="537" alt="R2" src="https://user-images.githubusercontent.com/74850874/222872042-1d6ff523-80d1-40b2-b49f-c24ffce73c45.png">
+<img width="513" alt="R3" src="https://user-images.githubusercontent.com/74850874/222872043-40d50a5d-3460-4047-bc9e-50bfaec89a61.png">
+<img width="574" alt="R4" src="https://user-images.githubusercontent.com/74850874/222872045-c6ea09cf-9b88-497e-b9a4-c66b723293fb.png">
+<img width="590" alt="R5" src="https://user-images.githubusercontent.com/74850874/222872047-5d4bcaa6-c1c2-46e3-abc4-499268fd4314.png">
+<img width="656" alt="R6" src="https://user-images.githubusercontent.com/74850874/222872048-3cd6d85b-4e0d-4e59-bf0e-dcf5bad3c537.png">
+<img width="498" alt="R7" src="https://user-images.githubusercontent.com/74850874/222872049-b17e4e2a-0d64-4525-90cc-c14df311fe5b.png">
+<img width="755" alt="RT1" src="https://user-images.githubusercontent.com/74850874/222872050-85665407-32ad-43b2-b490-c0a948915908.png">
+<img width="973" alt="RT2" src="https://user-images.githubusercontent.com/74850874/222872051-d6ca9638-9ee1-4af5-99f7-e51853d30a96.png">
+<img width="774" alt="RT3" src="https://user-images.githubusercontent.com/74850874/222872052-ba30abca-ab6d-4e14-9438-c4283a420067.png">
+<img width="1363" alt="RT4" src="https://user-images.githubusercontent.com/74850874/222872053-90122141-dd6c-41de-8251-50123c38b6ff.png">
+<img width="1098" alt="RT5" src="https://user-images.githubusercontent.com/74850874/222872054-6e94fd3a-64e5-4e49-b6ec-b75890754a90.png">
+<img width="807" alt="RT6" src="https://user-images.githubusercontent.com/74850874/222872055-38abad15-9e3b-462b-bd66-c1bdab050ae7.png">
+<img width="842" alt="RT7" src="https://user-images.githubusercontent.com/74850874/222872056-03ed1c3c-52d2-4722-8c05-ecf084ed6027.png">
+<img width="1092" alt="RT8" src="https://user-images.githubusercontent.com/74850874/222872057-0092358c-c2aa-44dd-b3f1-50f57f580821.png">
+<img width="781" alt="RT9" src="https://user-images.githubusercontent.com/74850874/222872059-62a3fde2-c1bf-46da-87e6-a2e1a2e22a05.png">
+<img width="862" alt="RT10" src="https://user-images.githubusercontent.com/74850874/222872061-dd071aea-6bf0-4a85-954f-1edb3287d330.png">
 
 # 6 Pros and cons of the coverage tools tried by your group in this assignment, in terms of reported measures, integration with the IDE and other plug-ins, user friendliness, crashes, etc.
 
