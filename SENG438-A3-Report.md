@@ -18,6 +18,8 @@
 The following lab report will be showing information on assignment 3. The assignment focuses on JUnit testing and how to improve the previous assignment with better tests that lead to more coverage of the code. Discussions about the complexity analysis are included. 
 
 # 2 Manual data-flow coverage calculations the two mentioned methods
+<img width="532" alt="Screen Shot 2023-03-03 at 7 16 59 PM" src="https://user-images.githubusercontent.com/84950398/222870598-e4d61cbe-5770-4651-bebf-b556b6a76807.png">
+<img width="427" alt="Screen Shot 2023-03-03 at 7 17 07 PM" src="https://user-images.githubusercontent.com/84950398/222870609-172ff967-589a-4cad-8635-e8903ad25f16.png">
 
 ## calculateColumnTotal()
 By counting the number of predicate nodes we can calcualte the cyclomatic complexity. We see that there are a total of 4 predicate nodes and using the equation of v(G) = 1 + d where "d" is the number of predicate nodes we get the overall cyclomatic complexity to be 5. 
