@@ -34,7 +34,8 @@ public class RangeTest  {
 
     // combine()--------------------------------
     /**
-     *
+     * This method will be testing the coverage of the combine method
+     * there will be a test of the combined range of two different ranges 
      */
     @Test // old
     public void testCombineWithBothRangesAsNull() {
@@ -46,7 +47,8 @@ public class RangeTest  {
 
 
     /**
-     *
+     * This method will test the combined range with the first range being null. 
+     * The range will be tested within the whole program
      */
     @Test // old
     public void testCombineWithRange1AsNull() {
@@ -57,9 +59,9 @@ public class RangeTest  {
     }
 
     /**
-     *
+     * This method will be testing the combined range of two ranges where the second one will be null 
      */
-    @Test // old
+    @Test 
     public void testCombineWithRange2AsNull() {
         Range range1 = new Range(0, 10);
         Range range2 = null;
@@ -68,7 +70,7 @@ public class RangeTest  {
     }
 
     /**
-     *
+     * This test will be checking the combination of two ranges where they are both not null 
      */
     @Test // old
     public void testCombineWithBothRangesNotNull() {
@@ -87,7 +89,8 @@ public class RangeTest  {
     }
 
     /**
-     *
+     * The method will be used to check the constrain between two ranges.
+     * 
      */
     @Test // new
     public void constrainBetween() {
@@ -96,6 +99,8 @@ public class RangeTest  {
     }
 
     /**
+     * This method will be testing the upper bounds of the ranges to be contstrained for a set number. 
+     * in this case it will be 4. 
      *
      */
     @Test // new
@@ -105,7 +110,9 @@ public class RangeTest  {
     }
 
     /**
-     *
+     * This method will be checking the constrains of the lower bound of the range. 
+     * There will be restricted to a lower bound specified in the constrain argument.  
+     * 
      */
     @Test // new
     public void constrainLowerBound() {
@@ -114,6 +121,7 @@ public class RangeTest  {
     }
 
     // contains()--------------------------------
+    // this test will be used to check if the range contains a specified value that is set in the argument. in this case it is 0.1
     @Test // old
     public void containsTest() {
         Range exampleRange;
@@ -125,7 +133,7 @@ public class RangeTest  {
     // equals()---------------------------------
 
     /**
-     *
+     * This method will be used to test if the range equals a certain value 
      */
     @Test // old
     public void testEquals_withEqualObjects_returnsTrue() {
@@ -135,7 +143,7 @@ public class RangeTest  {
     }
 
     /**
-     *
+     * This method will be used to test if a false boolean is returned from two ranges that are not equal to eachother 
      */
     @Test // old
     public void testEquals_withNonEqualObjects_returnsFalse() {
@@ -145,7 +153,7 @@ public class RangeTest  {
     }
 
     /**
-     *
+     * This method will be used to check for a false return between an object that is null 
      */
     @Test // old
     public void testEquals_withNullObject_returnsFalse() {
@@ -154,7 +162,7 @@ public class RangeTest  {
     }
 
     /**
-     *
+     * This method will be used to check if one range is not equal to a lower bound of another range 
      */
     @Test // new
     public void equalsIsLower() {
@@ -164,7 +172,7 @@ public class RangeTest  {
     }
 
     /**
-     *
+     * This method will be used to check if there is a range that does not contain a specified value
      */
     @Test // new
     public void equalsIsNotInRange() {
@@ -173,7 +181,7 @@ public class RangeTest  {
     }
 
     /**
-     *
+     * This method will be used to check if there is a specific range that 
      */
     @Test // new
     public void equalsIsUpper() {
@@ -183,7 +191,8 @@ public class RangeTest  {
     }
 
     /**
-     *
+     * This method will be used to check if there is a true return statement that is returned from 
+     * two ranges that are equal. 
      */
     @Test // new
     public void equalsIsTrue() {
@@ -195,7 +204,8 @@ public class RangeTest  {
 
     //expand()------------------------------------
     /**
-     *
+     * This method will be used to test the expand method of the ranges. 
+     * It should be returning the expanded ranges. 
      */
     @Test // old
     public void testExpandWithValidInputs1() {
@@ -205,7 +215,8 @@ public class RangeTest  {
     }
 
     /**
-     *
+     * This method will be used to check if there are ranges that will be expanded 
+     * with two inputs that are both valid 
      */
     @Test // old
     public void testExpandWithValidInputs2() {
@@ -218,7 +229,7 @@ public class RangeTest  {
     //expandToInclude()----------------------------
 
     /**
-     *
+     * This method will be used to check if the ranges can be 
      */
     @Test // old
     public void testExpandToInclude() {
