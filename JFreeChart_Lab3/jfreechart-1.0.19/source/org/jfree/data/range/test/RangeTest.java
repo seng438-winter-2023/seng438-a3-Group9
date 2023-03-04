@@ -309,7 +309,7 @@ public class RangeTest  {
     }
 
     /**
-     *
+     * Expand the given range to include the value given to the mathod, expandToInclude
      */
     @Test // new
     public void expandToIncludeValueLessThanLower() {
@@ -319,7 +319,7 @@ public class RangeTest  {
     }
 
     /**
-     *
+     * Expand the given range to include the value given to the mathod, expandToInclude that is lower than higher boundary
      */
     @Test // new
     public void expandToIncludeValueMoreThanUpper() {
@@ -329,7 +329,7 @@ public class RangeTest  {
     }
 
     /**
-     *
+     * The value given to the mathod, expandToInclude will be equal to the upper boundary
      */
     @Test // new
     public void expandToIncludeEqual() {
@@ -338,7 +338,7 @@ public class RangeTest  {
     }
 
     /**
-     *
+     * The value given to the mathod, expandToInclude will be equal to both upper and lower boundary
      */
     @Test // new
     public void expandToIncludeRangeNull() {
@@ -358,7 +358,7 @@ public class RangeTest  {
     // getCentralValue()---------------------------
 
     /**
-     *
+     * This method returns the central value of the given range
      */
     @Test // old
     public void testGetCentralValue()
@@ -379,7 +379,7 @@ public class RangeTest  {
     // getLength()---------------------------------
 
     /**
-     *
+     * This method return the length of the given range
      */
     @Test // old
     public void getLengthTest() {
@@ -387,8 +387,8 @@ public class RangeTest  {
     }
 
 
-    /**
-     *
+     /**
+     * This method return the length of the given range, na dwith given range being (0, 0), legth should also be 0
      */
     @Test // new
     public void getLengthShouldBeZero() {
@@ -404,7 +404,10 @@ public class RangeTest  {
     }
 
     // getLowerBound()-------------------------------
-    @Test // old
+    /**
+     * This method return the lower bound of the given range
+     */
+	 @Test // old
     public void getLowerBoundTest() {
         assertEquals("The expected upper bound of the range is 3",3,exampleRange.getLowerBound(), .000000001d);
     }
@@ -435,7 +438,10 @@ public class RangeTest  {
 
 
     // getUpperBound()-------------------------------
-    @Test // old
+    /**
+     * This method return the upper bound of the range
+     */
+	 @Test // old
     public void getUpperrBoundTest() {
         Range exampleRange;
         exampleRange = new Range(-2, 4);
@@ -450,7 +456,10 @@ public class RangeTest  {
 
 
     // hashCode()-------------------------------------
-
+	
+	/**
+     * This method return the hashcode given to the each range
+     */
     @Test // old
     public void testRangeHashCode()
     {
@@ -466,26 +475,38 @@ public class RangeTest  {
 
 
     // intersect()-----------------------------------
-    @Test // old
+    /**
+     * This method checks if two ranges intersects between each other
+     */
+	@Test // old
     public void testRangeIntersect() {
         Range exampleRange;
         exampleRange = new Range(-2, 4);
         assertTrue("The intersection between (-2, 4) and (3, 10) should be true.", exampleRange.intersects(3, 10));
     }
 
-    @Test // new
+    /**
+     * This method checks if two ranges intersects between each other
+     */
+	 @Test // new
     public void intersectsShouldBeTrueOnLower() {
         assertTrue("The lines intersect with each other",
                 exampleRange.intersects(-3, 0));
     }
 
-    @Test // new
+    /**
+     * This method checks if two ranges intersects between each other
+     */
+	 @Test // new
     public void intersectsShouldBeTrueOnMiddle() {
         assertTrue("The lines intersect with each other",
                 exampleRange.intersects(1, 2));
     }
 
-    @Test // new
+    /**
+     * This method checks if two ranges intersects between each other
+     */
+	 @Test // new
     public void intersectsShouldBeTrueOnUpper() {
         assertTrue("The lines intersect with each other",
                 exampleRange.intersects(2, 6));
@@ -567,7 +588,10 @@ public class RangeTest  {
 
 
     // shift()---------------------------------------
-    @Test // old - Zero Crossing is not alowed
+    /**
+     * This method checks if shifting lower boundry of the range move pass 0, and provides error message if so
+     */
+	 @Test // old - Zero Crossing is not alowed
     public void testShiftNotAllowZeroCrossingLowerBound()
     {
         Range base;
@@ -632,7 +656,10 @@ public class RangeTest  {
 
 
     // toString()------------------------------------
-    @Test // old
+    /**
+     * This method convert range to a specific format string
+     */
+	 @Test // old
     public void testRangeToString()
     {
         Range exampleRange;
