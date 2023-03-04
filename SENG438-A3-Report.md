@@ -20,7 +20,6 @@ The following lab report will be showing information on assignment 3. The assign
 # 2 Manual data-flow coverage calculations the two mentioned methods
 
 
-
 # 3 A detailed description of the testing strategy for the new unit tests
 The process in creating tests for coverage based testing required the group to follow a preformed pattern that would be predictable to all members. It all starts with understanding how the original code functions. By getting an understanding of the source code group members can exercise their coding techniques to get the best coverage of the source code. Next it was important 
 
