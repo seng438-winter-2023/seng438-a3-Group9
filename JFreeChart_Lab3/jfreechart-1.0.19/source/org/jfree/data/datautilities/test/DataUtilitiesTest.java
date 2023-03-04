@@ -148,6 +148,10 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(0.0, result, .000000001d);
     }
 
+    /**
+     * Tests the calculateColumnTotal method with valid rows and null values in the specified column.
+     * Verifies that the method returns a total of zero when the specified column contains null values.
+     */
     @Test //
     public void testCalculateColumnTotalWithValidRowsNullValuesTest() {
 
@@ -169,6 +173,10 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(0.0, result, .000000001d);
     }
 
+    /**
+     * Tests the calculateColumnTotal method with null values in the data table.
+     * Verifies that the method returns a total of zero when null is passed in as the data object.
+     */
     @Test //
     public void testCalculateColumnTotalWithNullValuesTest() {
         Mockery mockingContext = new Mockery();
@@ -190,6 +198,10 @@ public class DataUtilitiesTest extends DataUtilities {
     }
 
 
+    /**
+     * Tests the calculateColumnTotal method with a data table containing four values.
+     * Verifies that the method correctly calculates the total of the specified column for a valid data table input.
+     */
     @Test //
     public void calculateColumnTotalForFourValuesTest() {
         Mockery mockingContext = new Mockery();
@@ -212,6 +224,11 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(5.0, result, .000000001d);
     }
 
+    /**
+     * Tests the calculateColumnTotal method with invalid parameter passed in.
+     * Verifies that the method throws an InvalidParameterException when a null data object is passed in.
+     * @throws InvalidParameterException if invalid data object is passed in
+     */
     @Test(expected = InvalidParameterException.class) //
     public void calculateColumnTotalWithInvalidParameterTest() throws InvalidParameterException {
         Mockery mockingContext = new Mockery();
@@ -228,6 +245,11 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(0, result, .000000001d);
     }
 
+    /**
+     * Tests the calculateRowTotal method with invalid parameter passed in.
+     * Verifies that the method throws an InvalidParameterException when a null data object is passed in.
+     * @throws InvalidParameterException if invalid data object is passed in
+     */
     @Test(expected = InvalidParameterException.class) //
     public void calculateRowTotalWithInvalidParameterTest() throws InvalidParameterException {
         Mockery mockingContext = new Mockery();
