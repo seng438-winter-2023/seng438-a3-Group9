@@ -267,7 +267,10 @@ public class DataUtilitiesTest extends DataUtilities {
     }
 
     //-----------------------------------
-    @Test //
+    /**
+	* This method test the total of a given row
+	*/
+	@Test //
     public void calculateRowTotalTest() {
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
@@ -287,7 +290,10 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals("The sum of all elements in the row 0 should be 40", expected, result, .000000001d);
     }
 
-    @Test //
+    /**
+	* This method test the total of a given row with and invalid row number
+	*/
+	@Test //
     public void calculateRowTotalWithInvalidInputTest() {
 
         Mockery mockingContext = new Mockery();
@@ -305,7 +311,10 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(0.0, result, .000000001d);
     }
 
-    @Test //
+    /**
+	*
+	*/
+	@Test //
     public void calculateRowTotalForFourValuesTest() {
 
         Mockery mockingContext = new Mockery();
@@ -323,7 +332,10 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(5.0, result, .000000001d);
     }
 
-    @Test //
+    /**
+	* This method test the row total with null values
+	*/
+	@Test //
     public void calculateRowTotalWithNullValuesTest() {
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
@@ -345,7 +357,10 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(10.0, result, .000000001d);
     }
 
-    @Test //
+    /**
+	* This method tests the row total with valid columns
+	*/
+	@Test //
     public void calculateRowTotalWithValidColumnsTest() {
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
@@ -372,7 +387,10 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(8.5, result, .000000001d);
     }
 
-    @Test //
+    /**
+	* This method tests the row total with valid columns with null values
+	*/
+	@Test //
     public void calculateRowTotalWithValidColumnsNullValuesTest() {
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
@@ -399,7 +417,10 @@ public class DataUtilitiesTest extends DataUtilities {
         assertEquals(13.5, result, .000000001d);
     }
 
-    @Test //
+    /**
+	*
+	*/
+	@Test //
     public void calculateRowTotalWithInValidColumnsTest() {
         Mockery mockingContext = new Mockery();
         final Values2D values = mockingContext.mock(Values2D.class);
